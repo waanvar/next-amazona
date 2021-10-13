@@ -75,11 +75,6 @@ function UserEdit({ params }) {
   const router = useRouter();
   const classes = useStyles();
   const { userInfo } = state;
-  const [image, setImage] = useState('');
-
-  useEffect(() => {
-    setValue('image', image);
-  }, [image]);
 
   useEffect(() => {
     if (!userInfo) {

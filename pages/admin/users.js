@@ -52,14 +52,12 @@ function AdminUsers() {
   const classes = useStyles();
   const { userInfo } = state;
 
-  const [
-    { loading, error, users, loadingCreate, successDelete, loadingDelete },
-    dispatch,
-  ] = useReducer(reducer, {
-    loading: true,
-    users: [],
-    error: '',
-  });
+  const [{ loading, error, users, successDelete, loadingDelete }, dispatch] =
+    useReducer(reducer, {
+      loading: true,
+      users: [],
+      error: '',
+    });
 
   useEffect(() => {
     if (!userInfo) {
